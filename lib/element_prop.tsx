@@ -14,3 +14,5 @@ interface ElementProp {
   sub?: ElementProp[];
   page?: string;
 }
+
+export {ElementProp}
