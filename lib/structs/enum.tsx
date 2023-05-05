@@ -5,6 +5,7 @@ enum ParamTypeEnum {
     Percentage = 'percentage',
     Object = 'object',
     Flow = 'flow',
+    Record = 'record',
 }
 
 enum FieldTypeEnum {
@@ -15,13 +16,6 @@ enum FieldTypeEnum {
     Img = 'img',
 }
 
-const FeildTypeObject = {
-    String: 'string',
-    Video: 'video',
-    Number: 'number',
-    Float: 'float',
-    Img: 'img',
-};
 
 // eslint-disable-next-line import/prefer-default-export
-export {ParamTypeEnum, FieldTypeEnum, FeildTypeObject};
+export {ParamTypeEnum, FieldTypeEnum};
