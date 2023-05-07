@@ -12,13 +12,17 @@ interface FlowContext {
     SPI: {
         DataService: DataService,
     },
-    APPID: string;
+    appID: string;
 }
 
 interface IFlowNode {
     Execute(ctx: FlowContext): NodeError;
 
-    GetNodeConfigMeta(): Record<string, ParamMeta>;
+    GetInputMeta(): Record<string, ParamMeta>;
+
+    GetConfigMeta(): Record<string, ParamMeta>;
+
+    GetOutputMeta(): Record<string, ParamMeta>;
 }
 
 export {IFlowNode, NodeError, FlowContext}
