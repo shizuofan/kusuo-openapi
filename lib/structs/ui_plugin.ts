@@ -8,6 +8,11 @@ interface ParamMeta {
     flowConfig?: any;
 }
 
+interface ParamValue {
+    meta:ParamMeta;
+    value:any;
+}
+
 interface IComponentEntity {
     GetDefaultConfig(): ElementProp;
 
@@ -20,4 +25,4 @@ interface IComponentEntity {
     GetStyleConfigMeta(): Record<string, ParamMeta>;
 }
 
-export {ParamMeta, IComponentEntity}
+export {ParamMeta,ParamValue, IComponentEntity}
