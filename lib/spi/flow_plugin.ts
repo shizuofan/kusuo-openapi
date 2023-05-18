@@ -18,11 +18,7 @@ interface FlowContext {
 interface IFlowNode {
     Execute(ctx: FlowContext): NodeError;
 
-    GetInputMeta(): Record<string, ParamMeta>;
-
     GetConfigMeta(): Record<string, ParamMeta>;
-
-    GetOutputMeta(): Record<string, ParamMeta>;
 }
 
 export {IFlowNode, NodeError, FlowContext}
