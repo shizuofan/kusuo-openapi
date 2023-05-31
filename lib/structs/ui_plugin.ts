@@ -9,8 +9,10 @@ interface ParamMeta {
 }
 
 interface ParamValue {
-    meta:ParamMeta;
-    value:any;
+    meta: ParamMeta;
+    value: any;
+    id: string,
+    key: string,
 }
 
 interface IComponentEntity {
@@ -25,5 +27,5 @@ interface IComponentEntity {
     GetStyleConfigMeta(): Record<string, ParamMeta>;
 }
 
-export {ParamMeta,ParamValue, IComponentEntity}
+export {ParamMeta, ParamValue, IComponentEntity}
 
