@@ -10,7 +10,7 @@ interface ParamMeta {
 
 interface ParamValue {
     meta: ParamMeta;
-    value: any;
+    data: any;
     id: string,
     key: string,
 }
