@@ -6,6 +6,7 @@ interface ParamMeta {
     filter?: any;
     label?: string;
     flowConfig?: any;
+    defaultData?: any;
 }
 
 interface ParamValue {
