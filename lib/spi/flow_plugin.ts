@@ -1,4 +1,4 @@
-import {ParamMeta} from "../structs/ui_plugin";
+import {ParamMeta} from "../structs/plugin";
 import DataService from "../structs/data_service";
 
 

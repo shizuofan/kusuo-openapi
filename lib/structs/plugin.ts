@@ -5,8 +5,15 @@ interface ParamMeta {
     unit?: string;
     filter?: any;
     label?: string;
-    flowConfig?: any;
+    ObjectConfig?: {
+        InputType?: ObjectInputType,
+        IsArray: boolean,
+    };
     defaultData?: any;
+}
+
+enum ObjectInputType {
+    AllField = 'all_field'
 }
 
 interface ParamValue {
@@ -28,5 +35,5 @@ interface IComponentEntity {
     GetStyleConfigMeta(): Record<string, ParamMeta>;
 }
 
-export {ParamMeta, ParamValue, IComponentEntity}
+export {ParamMeta, ParamValue, IComponentEntity, ObjectInputType}
 
