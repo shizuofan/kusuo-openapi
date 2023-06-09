@@ -13,7 +13,9 @@ interface ParamMeta {
 }
 
 enum ObjectInputType {
-    AllField = 'all_field'
+    AllFieldEditor = 'all_field', // 全字段set
+    AddEditField = 'add_edit_field', // 可添加字段
+    Filter = 'filter', // 筛选器
 }
 
 interface ParamValue {
