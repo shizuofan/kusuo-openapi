@@ -1,4 +1,4 @@
-import {ObjectFieldMeta, ObjectMeta} from "./data";
+import {ObjectFieldMeta, ObjectMeta} from "../structs/data";
 
 interface DataService {
     QueryAllObjectsByAppID(appID: string): string

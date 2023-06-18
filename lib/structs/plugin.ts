@@ -1,7 +1,8 @@
 import {ElementProp} from "./element_prop";
+import {ParamTypeEnum, RecordTypeEnum} from "./enum";
 
 interface ParamMeta {
-    type: string;
+    type: RecordTypeEnum | ParamTypeEnum;
     unit?: string;
     filter?: any;
     label?: string;

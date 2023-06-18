@@ -16,6 +16,16 @@ enum FieldTypeEnum {
     Img = 'img',
 }
 
+enum RecordTypeEnum {
+    String = 'string',
+    Video = 'video',
+    Number = 'number',
+    Float = 'float',
+    Img = 'img',
+    Object = 'object',
+    List = 'list',
+}
+
 
 // eslint-disable-next-line import/prefer-default-export
-export {ParamTypeEnum, FieldTypeEnum};
+export {ParamTypeEnum, FieldTypeEnum, RecordTypeEnum};

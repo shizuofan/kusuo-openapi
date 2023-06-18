@@ -1,5 +1,6 @@
 import {ParamMeta} from "../structs/plugin";
-import DataService from "../structs/data_service";
+import DataService from "./data_service";
+import Logger from "./logger";
 
 
 interface NodeError {
@@ -9,8 +10,9 @@ interface NodeError {
 
 interface FlowContext {
     ID: string;
-    SPI: {
+    api: {
         DataService: DataService,
+        Logger: Logger,
     },
     appID: string;
 }
@@ -19,6 +21,8 @@ interface IFlowNode {
     Execute(ctx: FlowContext): NodeError;
 
     GetConfigMeta(): Record<string, ParamMeta>;
+
+    GetOutputMeta(): Record<string, ParamMeta>;
 }
 
 export {IFlowNode, NodeError, FlowContext}
