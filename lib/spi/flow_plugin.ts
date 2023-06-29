@@ -1,4 +1,4 @@
-import {ParamMeta} from "../structs/plugin";
+import {ParamMeta, ParamValue} from "../structs/plugin";
 import DataService from "./data_service";
 import Logger from "./logger";
 
@@ -18,7 +18,7 @@ interface FlowContext {
 }
 
 interface IFlowNode {
-    Execute(ctx: FlowContext): NodeError;
+    Execute(ctx: FlowContext, config: Record<string, ParamValue>): NodeError;
 
     GetConfigMeta(): Record<string, ParamMeta>;
 
