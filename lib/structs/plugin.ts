@@ -10,6 +10,10 @@ interface ParamMeta {
         InputType?: ObjectInputType,
         IsArray: boolean,
     };
+    RecordConfig?: {
+        RecordType?: RecordTypeEnum,
+        ListItemType?: RecordTypeEnum,
+    };
     defaultData?: any;
 }
 

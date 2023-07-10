@@ -3,9 +3,10 @@ import DataService from "./data_service";
 import Logger from "./logger";
 
 
-interface NodeError {
+interface NodeResult {
     Msg: string;
     ErrorCode: string;
+    Output?: Record<string, ParamValue>
 }
 
 interface FlowContext {
@@ -15,14 +16,19 @@ interface FlowContext {
         Logger: Logger,
     },
     appID: string;
+    node: {
+        id?: string,
+        label?: string,
+        config?: any,
+    }
 }
 
 interface IFlowNode {
-    Execute(ctx: FlowContext, config: Record<string, ParamValue>): NodeError;
+    Execute(ctx: FlowContext, input: Record<string, any>): (NodeResult);
 
     GetConfigMeta(): Record<string, ParamMeta>;
 
     GetOutputMeta(): Record<string, ParamMeta>;
 }
 
-export {IFlowNode, NodeError, FlowContext}
+export {IFlowNode, NodeResult, FlowContext}

@@ -24,6 +24,8 @@ enum RecordTypeEnum {
     Img = 'img',
     Object = 'object',
     List = 'list',
+    Any = 'any',
+    AnyWithList = 'any_with_list'
 }
 
 

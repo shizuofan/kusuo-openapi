@@ -1,5 +1,5 @@
 interface Logger {
-    Info(string)
+    Info(FlowContext, string)
 }
 
 export default Logger;
