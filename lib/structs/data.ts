@@ -1,7 +1,9 @@
+import {ParamTypeEnum} from "./enum";
+
 interface ObjectMeta {
     ID?: string;
-    Name: string;
-    Info?: ObjectInfo;
+    label: string;
+    desc?: string;
     Table?: string;
     CreateUser?: string;
     CreateTime?: number;
@@ -9,28 +11,30 @@ interface ObjectMeta {
     Fields?: Record<string, ObjectFieldMeta>;
     IsDeleted?: boolean;
     SourceID?: string;
+    Pointer?: KPointer;
 }
 
-interface ObjectInfo {
-    Label?: string;
-}
 
 interface ObjectFieldMeta {
     ID: string;
-    Label?: string;
-    Type?: string;
+    label?: string;
+    Type: ParamTypeEnum;
     Order?: number;
     TableKey?: string;
+    len: number;
     IsDelete?: boolean;
+    desc?: string;
     Value?: any;
+    IsSystem?: boolean;
     CreateTime?: number;
     EnableEdit?: boolean;
+    Pointer?: KPointer;
 }
 
-interface RecordFieldValue {
-    Type?: string;
-    FieldType?: number;
-    Value?: any;
+interface KPointer {
+    path?: string[],
+    index?: string,
 }
 
-export {ObjectMeta, ObjectInfo, ObjectFieldMeta, RecordFieldValue}
+
+export {ObjectMeta, ObjectFieldMeta, KPointer}

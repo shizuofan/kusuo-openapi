@@ -1,27 +1,25 @@
-import {ElementProp} from "./element_prop";
-import {ParamTypeEnum, RecordTypeEnum} from "./enum";
+import {ParamTypeEnum} from "./enum";
+import {ReactElement} from 'react';
 
 interface ParamMeta {
-    type: RecordTypeEnum | ParamTypeEnum;
+    type: ParamTypeEnum;
     unit?: string;
     filter?: any;
     label?: string;
     ObjectConfig?: {
-        InputType?: ObjectInputType,
+        NeedDetail: boolean,
         IsArray: boolean,
     };
     RecordConfig?: {
-        RecordType?: RecordTypeEnum,
-        ListItemType?: RecordTypeEnum,
+        RecordType?: ParamTypeEnum,
+        ListItemType?: ParamTypeEnum,
     };
     defaultData?: any;
+    configRender?: (
+        value: ParamValue,
+        setValue: (meta: ParamValue, value: any) => void, item_data: any) => ReactElement;
 }
 
-enum ObjectInputType {
-    AllFieldEditor = 'all_field', // 全字段set
-    AddEditField = 'add_edit_field', // 可添加字段
-    Filter = 'filter', // 筛选器
-}
 
 interface ParamValue {
     meta: ParamMeta;
@@ -30,17 +28,5 @@ interface ParamValue {
     key: string,
 }
 
-interface IComponentEntity {
-    GetDefaultConfig(): ElementProp;
-
-    renderRunner(): (prop: ElementProp) => any;
-
-    renderPreview(): (prop: ElementProp) => any;
-
-    GetDataConfigMeta(): Record<string, ParamMeta>;
-
-    GetStyleConfigMeta(): Record<string, ParamMeta>;
-}
-
-export {ParamMeta, ParamValue, IComponentEntity, ObjectInputType}
+export {ParamMeta, ParamValue}
 
