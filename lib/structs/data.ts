@@ -12,6 +12,7 @@ interface ObjectMeta {
     IsDeleted?: boolean;
     SourceID?: string;
     Pointer?: KPointer;
+    valueBy?:'byPointer'|'byField'
 }
 
 
@@ -29,12 +30,30 @@ interface ObjectFieldMeta {
     CreateTime?: number;
     EnableEdit?: boolean;
     Pointer?: KPointer;
+    valueBy?:'byPointer'|'byConst'
+    modified?: boolean;
 }
+
+interface KObject {
+    ID: string,
+    value?: Record<string, any>,
+    meta: ObjectMeta,
+    isList?: boolean,
+    listValue?: KObject[],
+}
+
 
 interface KPointer {
     path?: string[],
     index?: string,
 }
 
+interface KQueryOption {
+    offset: number;
+    size: number;
+    search?: Record<string, any>;
+    order?: string[];
+}
 
-export {ObjectMeta, ObjectFieldMeta, KPointer}
+
+export {ObjectMeta, ObjectFieldMeta, KPointer, KObject, KQueryOption}

@@ -3,6 +3,7 @@ import {ReactElement} from 'react';
 
 interface ParamMeta {
     type: ParamTypeEnum;
+    genericType?: string;
     unit?: string;
     filter?: any;
     label?: string;

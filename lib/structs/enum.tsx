@@ -2,6 +2,8 @@
 enum ParamTypeEnum {
     Boolean = 'boolean',
     Object = 'object',
+    ObjectWithValue = 'object_with_value',
+    RecordWithValue = 'record_with_value',
     Flow = 'flow',
     Record = 'record',
     List = 'list',

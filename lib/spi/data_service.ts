@@ -1,54 +1,31 @@
-import {ObjectFieldMeta, ObjectMeta} from "../structs/data";
+import {KObject, KQueryOption, ObjectFieldMeta, ObjectMeta} from "../structs/data";
+import {FlowContext} from "./flow_plugin";
 
 interface DataService {
-    QueryAllObjectsByAppID(appID: string): string
-
-    CreateObject(
-        appID: string,
-        group: string,
-        meta: ObjectMeta
-    ): ObjectMeta
-
-    DelObject(appID: string, group: string, objectID: string)
-
-    UpdateObject(appID, dataSourceID, objectID, meta)
-
-    updateObjectOnPlugin(
-        appID: string,
-        object: ObjectMeta,
-        adds: ObjectFieldMeta[],
-        dels: ObjectFieldMeta[],
-        updates: ObjectFieldMeta[]
-    )
 
     QueryAllData(
-        appID: string,
-        sourceID: string,
-        objectID,
-        filter: Record<string, any>
-    )
+        ctx:FlowContext,
+        objectMeta:ObjectMeta,
+        option:KQueryOption,
+    ):KObject[]
 
     UpdateRecord(
-        appID: string,
+        ctx:FlowContext,
         objectID: string,
-        sourceID: string,
         recordID: string,
-        record: Record<string, any>
-    )
+        update_fields: Record<string, any>
+    ): number
 
     DeleteRecord(
-        appID: string,
-        sourceID: string,
+        ctx: FlowContext,
         objectID: string,
         recordID: string
-    )
+    ): number
 
     AddRecord(
-        appID: string,
-        sourceID: string,
-        objectID: string,
-        record: Record<string, any>
-    )
+        ctx:FlowContext,
+        object:KObject,
+    ): string
 }
 
 
