@@ -17,6 +17,7 @@ enum ParamTypeEnum {
     render = 'render',
     Class = 'class',
     File = 'file',
+    Page = 'page',
 }
 
 
