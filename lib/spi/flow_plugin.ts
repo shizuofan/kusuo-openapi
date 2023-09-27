@@ -21,14 +21,25 @@ interface FlowContext {
         label?: string,
         config?: any,
     }
+    is_debug?: boolean;
 }
 
 interface IFlowNode {
+    baseInfo: FlowNodeBaseInfo;
+
     Execute(ctx: FlowContext, input: Record<string, any>): (NodeResult);
 
-    GetConfigMeta(): Record<string, ParamMeta>;
-
-    GetOutputMeta(): Record<string, ParamMeta>;
+    // GetConfigMeta(): Record<string, ParamMeta>;
+    //
+    // GetOutputMeta(): Record<string, ParamMeta>;
 }
 
-export {IFlowNode, NodeResult, FlowContext}
+interface FlowNodeBaseInfo {
+    customInput: boolean,
+    customOutput: boolean,
+    inputMeta: Record<string, ParamMeta>,
+    outputMeta: Record<string, ParamMeta>,
+
+}
+
+export {IFlowNode, NodeResult, FlowContext, FlowNodeBaseInfo}
