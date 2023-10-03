@@ -14,7 +14,8 @@ interface ParamMeta {
     configRender?: (
         value: ParamValue,
         setValueV2: (value: ParamValue) => void,
-        item_data: any
+        item_data: any,
+        ctx?: any,
     ) => ReactElement;
     enum_list?:string[];
 }
