@@ -16,7 +16,7 @@ interface ParamMeta {
         setValueV2: (value: ParamValue) => void,
         item_data: any
     ) => ReactElement;
-    enum_list:string[];
+    enum_list?:string[];
 }
 
 
