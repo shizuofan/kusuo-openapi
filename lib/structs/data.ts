@@ -12,7 +12,7 @@ interface ObjectMeta {
     IsDeleted?: boolean;
     SourceID?: string;
     Pointer?: KPointer;
-    valueBy?:'byPointer'|'byField'
+    valueBy?:'byPointer'|'byField';
 }
 
 

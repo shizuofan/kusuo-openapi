@@ -20,7 +20,8 @@ enum ParamTypeEnum {
     Page = 'page',
     StringConst = 'string_const',
     JSCode = 'javascript',
-    Enum = 'enum'
+    Enum = 'enum',
+    Color = 'color',
 }
 
 
