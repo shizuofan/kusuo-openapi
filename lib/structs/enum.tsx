@@ -19,7 +19,8 @@ enum ParamTypeEnum {
     File = 'file',
     Page = 'page',
     StringConst = 'string_const',
-    JSCode = 'javascript'
+    JSCode = 'javascript',
+    Enum = 'enum'
 }
 
 
