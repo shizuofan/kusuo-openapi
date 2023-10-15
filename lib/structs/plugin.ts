@@ -17,7 +17,7 @@ interface ParamMeta {
         item_data: any,
         ctx?: any,
     ) => ReactElement;
-    enum_list?:string[];
+    enum_list?: { label: string, value: string }[];
 }
 
 
