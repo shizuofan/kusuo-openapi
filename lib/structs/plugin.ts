@@ -18,6 +18,7 @@ interface ParamMeta {
         ctx?: any,
     ) => ReactElement;
     enum_list?: { label: string, value: string }[];
+    enum_mod?: 'multiple'
 }
 
 
