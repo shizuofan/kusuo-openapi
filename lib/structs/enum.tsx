@@ -23,6 +23,7 @@ enum ParamTypeEnum {
     JSCode = 'javascript',
     Enum = 'enum',
     Color = 'color',
+    ActionList = 'action_list'
 }
 
 
