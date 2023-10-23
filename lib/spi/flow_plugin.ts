@@ -27,7 +27,7 @@ interface FlowContext {
 interface IFlowNode {
     baseInfo: FlowNodeBaseInfo;
 
-    Execute(ctx: FlowContext, input: Record<string, any>): (NodeResult);
+    Execute(ctx: FlowContext, input: Record<string, any>): (Promise<NodeResult>);
 
     // GetConfigMeta(): Record<string, ParamMeta>;
     //
