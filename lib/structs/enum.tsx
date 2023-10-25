@@ -23,7 +23,8 @@ enum ParamTypeEnum {
     JSCode = 'javascript',
     Enum = 'enum',
     Color = 'color',
-    NanoFlow = 'nano_flow'
+    NanoFlow = 'nano_flow',
+    KVariable = 'k_variable',
 }
 
 
