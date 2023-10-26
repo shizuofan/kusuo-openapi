@@ -26,12 +26,7 @@ interface FlowContext {
 
 interface IFlowNode {
     baseInfo: FlowNodeBaseInfo;
-
     Execute(ctx: FlowContext, input: Record<string, any>): (Promise<NodeResult>);
-
-    // GetConfigMeta(): Record<string, ParamMeta>;
-    //
-    // GetOutputMeta(): Record<string, ParamMeta>;
 }
 
 interface FlowNodeBaseInfo {
@@ -39,7 +34,8 @@ interface FlowNodeBaseInfo {
     customOutput: boolean,
     inputMeta: Record<string, ParamMeta>,
     outputMeta: Record<string, ParamMeta>,
-
+    label:string,
+    desc:string,
 }
 
 export {IFlowNode, NodeResult, FlowContext, FlowNodeBaseInfo}
