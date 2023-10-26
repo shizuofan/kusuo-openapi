@@ -22,6 +22,8 @@ interface FlowContext {
         config?: any,
     }
     is_debug?: boolean;
+
+    page_vars?:Record<string,any>
 }
 
 interface IFlowNode {
