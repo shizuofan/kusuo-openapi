@@ -13,6 +13,7 @@ interface ObjectMeta {
     SourceID?: string;
     Pointer?: KPointer;
     valueBy?:'byPointer'|'byField';
+    c_type?:'mysql'|'sqlite';
 }
 
 
