@@ -25,7 +25,8 @@ enum ParamTypeEnum {
     Color = 'color',
     NanoFlow = 'nano_flow',
     KVariable = 'k_variable',
-    Element = 'element'
+    Element = 'element',
+    Expr = 'expr'
 }
 
 
