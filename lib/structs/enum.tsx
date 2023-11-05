@@ -26,7 +26,8 @@ enum ParamTypeEnum {
     NanoFlow = 'nano_flow',
     KVariable = 'k_variable',
     Element = 'element',
-    Expr = 'expr'
+    Expr = 'expr',
+    Blob = 'blob'
 }
 
 
