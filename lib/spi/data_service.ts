@@ -8,6 +8,12 @@ interface DataService {
         option: KQueryOption
     ): Promise<KObject[]>;
 
+    QueryByID(
+        ctx: FlowContext,
+        objectMeta: ObjectMeta,
+        ID: string
+    ): Promise<KObject>
+
     UpdateRecord(
         ctx: FlowContext,
         objectID: string,
