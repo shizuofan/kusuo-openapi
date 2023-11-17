@@ -25,8 +25,8 @@ interface ParamMeta {
 
 interface ParamValue {
     meta: ParamMeta;
-    data: any;
-    id: string,
+    data?: any;
+    id?: string,
     // key: string,
 }
 
