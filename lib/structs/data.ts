@@ -12,8 +12,8 @@ interface ObjectMeta {
     IsDeleted?: boolean;
     SourceID?: string;
     Pointer?: KPointer;
-    valueBy?:'byPointer'|'byField';
-    c_type?:'mysql'|'sqlite';
+    valueBy?: 'byPointer' | 'byField';
+    c_type?: 'mysql' | 'sqlite';
 }
 
 
@@ -31,7 +31,7 @@ interface ObjectFieldMeta {
     CreateTime?: number;
     EnableEdit?: boolean;
     Pointer?: KPointer;
-    valueBy?:'byPointer'|'byConst'
+    valueBy?: 'byPointer' | 'byConst'
     modified?: boolean;
 }
 
@@ -56,5 +56,42 @@ interface KQueryOption {
     order?: string[];
 }
 
+interface FieldOption {
+    field: ObjectFieldMeta
+    assign_by?: 'point' | 'const' | undefined
+    right?: {
+        pointer?: string;
+        const_value?: any;
+    },
+    op?: string;
+}
 
-export {ObjectMeta, ObjectFieldMeta, KPointer, KObject, KQueryOption}
+
+interface ObjectFilterOption {
+    object: ObjectMeta,
+    filters: FieldOption[]
+}
+
+interface ObjectUpdateOption {
+    object: ObjectMeta,
+    update_fields: FieldOption[]
+}
+
+interface ObjectInsertOption {
+    object: ObjectMeta,
+    assign_by: 'point' | 'const' | undefined;
+    update_fields: FieldOption[]
+}
+
+
+export {
+    ObjectMeta,
+    ObjectFieldMeta,
+    KPointer,
+    KObject,
+    KQueryOption,
+    ObjectFilterOption,
+    ObjectUpdateOption,
+    ObjectInsertOption,
+    FieldOption
+}
