@@ -56,8 +56,8 @@ interface KQueryOption {
     order?: string[];
 }
 
-interface FieldOption {
-    field: ObjectFieldMeta
+interface Expression {
+    left: ObjectFieldMeta
     assign_by?: 'point' | 'const' | undefined
     right?: {
         pointer?: string;
@@ -69,19 +69,19 @@ interface FieldOption {
 
 interface ObjectFilterOption {
     object: ObjectMeta,
-    filters: FieldOption[]
+    filters: Expression[]
 }
 
 interface RecordUpdateOption {
     object: ObjectMeta,
     pointer: string,
-    update_fields: FieldOption[]
+    update_fields: Expression[]
 }
 
 interface ObjectInsertOption {
     object: ObjectMeta,
     assign_by: 'point' | 'const' | undefined;
-    update_fields: FieldOption[]
+    update_fields: Expression[]
 }
 
 
@@ -94,5 +94,5 @@ export {
     ObjectFilterOption,
     RecordUpdateOption,
     ObjectInsertOption,
-    FieldOption
+    Expression
 }
