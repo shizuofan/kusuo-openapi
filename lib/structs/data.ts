@@ -72,7 +72,7 @@ interface ObjectFilterOption {
     filters: FieldOption[]
 }
 
-interface ObjectUpdateOption {
+interface RecordUpdateOption {
     object: ObjectMeta,
     pointer: string,
     update_fields: FieldOption[]
@@ -92,7 +92,7 @@ export {
     KObject,
     KQueryOption,
     ObjectFilterOption,
-    ObjectUpdateOption,
+    RecordUpdateOption,
     ObjectInsertOption,
     FieldOption
 }
