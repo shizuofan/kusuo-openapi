@@ -74,6 +74,7 @@ interface ObjectFilterOption {
 
 interface ObjectUpdateOption {
     object: ObjectMeta,
+    pointer: string,
     update_fields: FieldOption[]
 }
 

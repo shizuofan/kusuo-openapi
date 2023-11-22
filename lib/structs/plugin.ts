@@ -4,7 +4,7 @@ import {ReactElement} from 'react';
 interface ParamMeta {
     type: ParamTypeEnum;
     record_type?: ParamTypeEnum;
-    genericType?: string; // 泛型类指向
+    generic_point?: string; // 泛型类指向
     unit?: string;
     label?: string;
     defaultData?: any;
