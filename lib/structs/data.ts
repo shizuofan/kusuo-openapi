@@ -80,6 +80,7 @@ interface RecordUpdateOption {
 
 interface ObjectInsertOption {
     object: ObjectMeta,
+    pointer:string,
     assign_by: 'point' | 'const' | undefined;
     update_fields: Expression[]
 }
