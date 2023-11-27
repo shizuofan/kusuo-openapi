@@ -12,7 +12,6 @@ interface ObjectMeta {
     IsDeleted?: boolean;
     SourceID?: string;
     Pointer?: KPointer;
-    valueBy?: 'byPointer' | 'byField';
     c_type?: 'mysql' | 'sqlite';
 }
 
@@ -31,7 +30,6 @@ interface ObjectFieldMeta {
     CreateTime?: number;
     EnableEdit?: boolean;
     Pointer?: KPointer;
-    valueBy?: 'byPointer' | 'byConst'
     modified?: boolean;
 }
 
