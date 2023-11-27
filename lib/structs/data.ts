@@ -87,7 +87,7 @@ interface ObjectInsertOption {
 export {
     ObjectMeta,
     ObjectFieldMeta,
-    KPointer,
+    // KPointer,
     KObject,
     KQueryOption,
     ObjectSelectOption,
