@@ -33,15 +33,6 @@ interface ObjectFieldMeta {
     modified?: boolean;
 }
 
-interface KObject {
-    ID: string,
-    value?: Record<string, any>,
-    meta: ObjectMeta,
-    isList?: boolean,
-    listValue?: KObject[],
-}
-
-
 interface KPointer {
     path?: string[],
     index?: string,
@@ -88,8 +79,6 @@ interface ObjectInsertOption {
 export {
     ObjectMeta,
     ObjectFieldMeta,
-    // KPointer,
-    KObject,
     KQueryOption,
     ObjectSelectOption,
     RecordUpdateOption,
