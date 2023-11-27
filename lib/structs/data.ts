@@ -60,6 +60,7 @@ interface Expression {
     right?: {
         pointer?: string;
         const_value?: any;
+        value?: any;
     },
     op?: string;
 }
@@ -78,9 +79,9 @@ interface RecordUpdateOption {
 
 interface ObjectInsertOption {
     object: ObjectMeta,
-    pointer:string,
+    pointer: string,
     assign_by: 'point' | 'const' | undefined;
-    update_fields: Expression[]
+    insert_fields: Expression[]
 }
 
 
