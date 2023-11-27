@@ -5,6 +5,7 @@ enum ParamTypeEnum {
     ObjectInserter = 'object_inserter',
     ObjectSelector = 'object_selector',
     RecordUpdater = 'record_updater',
+    RecordDelete = 'record_delete',
     Flow = 'flow',
     Record = 'record',
     List = 'list',
