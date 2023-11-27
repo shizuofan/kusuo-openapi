@@ -43,6 +43,7 @@ interface KQueryOption {
     size: number;
     search?: Record<string, any>;
     order?: string[];
+    filters?: string[];
 }
 
 interface Expression {
