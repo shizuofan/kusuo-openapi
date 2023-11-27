@@ -67,7 +67,7 @@ interface Expression {
 }
 
 
-interface ObjectFilterOption {
+interface ObjectSelectOption {
     object: ObjectMeta,
     filters: Expression[]
 }
@@ -92,7 +92,7 @@ export {
     KPointer,
     KObject,
     KQueryOption,
-    ObjectFilterOption,
+    ObjectSelectOption,
     RecordUpdateOption,
     ObjectInsertOption,
     Expression

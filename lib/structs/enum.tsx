@@ -2,9 +2,9 @@
 enum ParamTypeEnum {
     Boolean = 'boolean',
     Object = 'object',
-    ObjectWithValue = 'object_with_value',
-    ObjectWithFilter = 'object_with_filter',
-    RecordWithValue = 'record_with_value',
+    ObjectInserter = 'object_inserter',
+    ObjectSelector = 'object_selector',
+    RecordUpdater = 'record_updater',
     Flow = 'flow',
     Record = 'record',
     List = 'list',
