@@ -1,4 +1,4 @@
-import { KQueryOption, ObjectFieldMeta, ObjectMeta} from "../structs/data";
+import {KQueryOption, ObjectFieldMeta, ObjectMeta} from "../structs/data";
 import {FlowContext} from "./flow_plugin";
 
 interface DataService {
@@ -23,7 +23,7 @@ interface DataService {
 
     DeleteRecord(ctx: FlowContext, objectID: string, recordID: string): Promise<number>;
 
-    AddRecord(ctx: FlowContext, object: any): Promise<string>;
+    AddRecord(ctx: FlowContext, objectID: string, object: any): Promise<string>;
 }
 
 export default DataService;
