@@ -2,7 +2,7 @@ import { KQueryOption, ObjectFieldMeta, ObjectMeta} from "../structs/data";
 import {FlowContext} from "./flow_plugin";
 
 interface DataService {
-    QueryAllData(
+    Query(
         ctx: FlowContext,
         objectMeta: ObjectMeta,
         option: KQueryOption
