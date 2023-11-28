@@ -1,5 +1,4 @@
 import {ParamTypeEnum} from "./enum";
-import {ReactElement} from 'react';
 
 interface ParamMeta {
     type: ParamTypeEnum;
@@ -16,7 +15,7 @@ interface ParamMeta {
         setValueV2: (value: ParamValue) => void,
         item_data: any,
         ctx?: any,
-    ) => ReactElement;
+    ) => Element;
     enum_list?: { label: string, value: string }[];
     enum_mod?: 'multiple'
     expr_except_type?:ParamTypeEnum;
