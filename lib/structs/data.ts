@@ -66,6 +66,7 @@ interface ObjectSelectOption {
 interface RecordUpdateOption {
     object: ObjectMeta,
     pointer: string,
+    value?: any,
     update_fields: Expression[]
 }
 
