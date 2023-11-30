@@ -47,7 +47,10 @@ interface KQueryOption {
 }
 
 interface Expression {
-    left: ObjectFieldMeta
+    left: {
+        ID:string;
+        label?:string;
+    }
     assign_by?: 'point' | 'const' | undefined
     right?: {
         pointer?: string;
