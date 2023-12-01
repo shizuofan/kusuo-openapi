@@ -48,8 +48,9 @@ interface KQueryOption {
 
 interface Expression {
     left: {
-        ID:string;
-        label?:string;
+        ID: string;
+        label?: string;
+        Type?: ParamTypeEnum;
     }
     assign_by?: 'point' | 'const' | undefined
     right?: {
