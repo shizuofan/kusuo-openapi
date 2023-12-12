@@ -6,7 +6,11 @@ import Logger from "./logger";
 interface NodeResult {
     Msg: string;
     ErrorCode: string;
-    Output?: Record<string, any>
+    Output?: Record<string, any>;
+    AlertInfo?:{
+        message:string;
+        level:'info'|'error'|'warn'
+    }
 }
 
 interface FlowContext {
