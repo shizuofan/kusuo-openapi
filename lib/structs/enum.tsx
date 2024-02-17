@@ -27,7 +27,8 @@ enum ParamTypeEnum {
     KVariable = 'k_variable',
     Element = 'element',
     Expr = 'expr',
-    Blob = 'blob'
+    Blob = 'blob',
+    DataSource = 'data_source'
 }
 
 
