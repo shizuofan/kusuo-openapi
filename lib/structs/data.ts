@@ -20,6 +20,8 @@ interface ObjectFieldMeta {
     ID: string;
     label?: string;
     Type: ParamTypeEnum;
+    ObjectID?: string;
+    IsList?: boolean;
     Order?: number;
     TableKey?: string;
     len: number;
