@@ -43,7 +43,6 @@ interface KPointer {
 interface KQueryOption {
     offset?: number;
     size?: number;
-    search?: Record<string, any>;
     order?: string[];
     filters?: Expression[];
 }
