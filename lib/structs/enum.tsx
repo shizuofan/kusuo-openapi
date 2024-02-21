@@ -28,7 +28,8 @@ enum ParamTypeEnum {
     Element = 'element',
     Expr = 'expr',
     Blob = 'blob',
-    DataSource = 'data_source'
+    DataSource = 'data_source',
+    Custom = 'custom'
 }
 
 
