@@ -21,6 +21,7 @@ interface ParamMeta {
     enum_mod?: 'multiple'
     expr_except_type?: ParamTypeEnum;
     notice?: string;
+    object_id?: string;
 }
 
 
