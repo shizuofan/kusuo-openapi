@@ -19,16 +19,16 @@ interface ParamMeta {
     ) => ReactElement;
     enum_list?: { label: string, value: string }[];
     enum_mod?: 'multiple'
-    expr_except_type?:ParamTypeEnum;
+    expr_except_type?: ParamTypeEnum;
     notice?: string;
 }
 
 
 interface ParamValue {
     meta: ParamMeta;
+    biz_meta?: ParamMeta;
     data?: any;
     id?: string,
-    // key: string,
 }
 
 export {ParamMeta, ParamValue}
