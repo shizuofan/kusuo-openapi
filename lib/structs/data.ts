@@ -57,8 +57,7 @@ interface Expression {
     }
     assign_by?: 'point' | 'const' | undefined
     right?: {
-        pointer?: string;
-        const_value?: any;
+        expr?: string;
         value?: any;
     },
     op?: string;
