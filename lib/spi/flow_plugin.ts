@@ -1,6 +1,7 @@
 import {ParamMeta, ParamValue} from "../structs/plugin";
 import DataService from "./data_service";
 import Logger from "./logger";
+import {ObjectMeta} from "../structs/data";
 
 
 interface NodeResult {
@@ -27,7 +28,9 @@ interface FlowContext {
     }
     is_debug?: boolean;
 
-    page_vars?:Record<string,any>
+    page_vars?:Record<string,any>;
+
+    data_list?:Record<string,ObjectMeta>;
 }
 
 interface IFlowNode {
