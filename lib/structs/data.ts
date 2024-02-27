@@ -54,8 +54,9 @@ interface Expression {
         label?: string;
         Type?: ParamTypeEnum;
         ObjectID?: string;
+        IsList?:boolean;
     }
-    assign_by?: 'point' | 'const' | undefined
+    // assign_by?: 'point' | 'const' | undefined
     right?: {
         expr?: string;
         value?: any;
