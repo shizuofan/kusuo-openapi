@@ -22,6 +22,7 @@ interface ParamMeta {
     expr_except_type?: ParamTypeEnum;
     notice?: string;
     object_id?: string;
+    is_list?: boolean;
 }
 
 
