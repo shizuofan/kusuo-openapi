@@ -23,6 +23,7 @@ interface ParamMeta {
     notice?: string;
     object_id?: string;
     is_list?: boolean;
+    is_custom?: boolean;
 }
 
 
