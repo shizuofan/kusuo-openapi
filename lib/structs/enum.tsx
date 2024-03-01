@@ -34,7 +34,8 @@ enum ParamTypeEnum {
     Address = 'address',
     Mail = 'mail',
     Phone = 'phone',
-    Icon = 'icon'
+    Icon = 'icon',
+    Password = 'password'
 }
 
 
