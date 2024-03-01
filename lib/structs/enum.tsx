@@ -29,7 +29,12 @@ enum ParamTypeEnum {
     Expr = 'expr',
     Blob = 'blob',
     DataSource = 'data_source',
-    Custom = 'custom'
+    Custom = 'custom',
+    Date = 'date',
+    Address = 'address',
+    Mail = 'mail',
+    Phone = 'phone',
+    Icon = 'icon'
 }
 
 
