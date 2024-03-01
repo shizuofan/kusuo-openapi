@@ -8,9 +8,9 @@ interface NodeResult {
     Msg: string;
     ErrorCode: string;
     Output?: Record<string, any>;
-    AlertInfo?:{
-        message:string;
-        level:'info'|'error'|'warn'
+    AlertInfo?: {
+        message: string;
+        level: 'info' | 'error' | 'warn'
     }
 }
 
@@ -28,13 +28,19 @@ interface FlowContext {
     }
     is_debug?: boolean;
 
-    page_vars?:Record<string,any>;
+    page_vars?: Record<string, any>;
 
-    data_list?:Record<string,ObjectMeta>;
+    data_list?: Record<string, ObjectMeta>;
+
+    user_info: {
+        ID: string,
+        Name?: string,
+    }
 }
 
 interface IFlowNode {
     baseInfo: FlowNodeBaseInfo;
+
     Execute(ctx: FlowContext, input: Record<string, any>): (Promise<NodeResult>);
 }
 
@@ -43,8 +49,8 @@ interface FlowNodeBaseInfo {
     customOutput: boolean,
     inputMeta: Record<string, ParamMeta>,
     outputMeta: Record<string, ParamMeta>,
-    label:string,
-    desc:string,
+    label: string,
+    desc: string,
 }
 
 export {IFlowNode, NodeResult, FlowContext, FlowNodeBaseInfo}
