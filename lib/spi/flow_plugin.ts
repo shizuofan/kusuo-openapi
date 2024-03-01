@@ -33,8 +33,8 @@ interface FlowContext {
     data_list?: Record<string, ObjectMeta>;
 
     user_info: {
-        ID: string,
-        Name?: string,
+        id: string,
+        name?: string,
     }
 }
 
