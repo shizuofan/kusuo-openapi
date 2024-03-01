@@ -34,6 +34,7 @@ interface ObjectFieldMeta {
     EnableEdit?: boolean;
     Pointer?: KPointer;
     modified?: boolean;
+    IsEncryption?: boolean;
 }
 
 interface KPointer {
@@ -54,7 +55,7 @@ interface Expression {
         label?: string;
         Type?: ParamTypeEnum;
         ObjectID?: string;
-        IsList?:boolean;
+        IsList?: boolean;
     }
     // assign_by?: 'point' | 'const' | undefined
     right?: {
