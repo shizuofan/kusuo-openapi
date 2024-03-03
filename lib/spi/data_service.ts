@@ -11,17 +11,17 @@ interface DataService {
     QueryByID(
         ctx: FlowContext,
         objectMeta: ObjectMeta,
-        ID: string
+        ID: number
     ): Promise<any>
 
     UpdateRecord(
         ctx: FlowContext,
         objectID: string,
-        recordID: string,
+        recordID: number,
         update_fields: Record<string, any>
     ): Promise<number>;
 
-    DeleteRecord(ctx: FlowContext, objectID: string, recordID: string): Promise<number>;
+    DeleteRecord(ctx: FlowContext, objectID: string, recordID: number): Promise<number>;
 
     AddRecord(ctx: FlowContext, objectID: string, object: any): Promise<string>;
 }
