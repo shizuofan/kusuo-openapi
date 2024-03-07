@@ -14,6 +14,7 @@ interface ObjectMeta {
     Pointer?: KPointer;
     c_type?: 'mysql' | 'sqlite';
     display?: string;
+    is_system?: boolean;
 }
 
 
